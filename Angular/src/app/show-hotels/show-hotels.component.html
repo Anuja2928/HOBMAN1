@@ -1,0 +1,93 @@
+<p>
+  show-hotels works!
+</p>
+
+
+
+<!-- to add hotel -->
+<!-- <form (ngSubmit) = "callAddHotel()">
+  Add Hotel 
+  Enter HotelId : 
+  <input type="number" required [(ngModel)] = "newHotel.hotelId" name = "hotelId">
+
+  <br><br>
+
+  Enter Hotel Name : 
+  <input type='text' required [(ngModel)] = "newHotel.hotelName" name = "hotelName">
+
+  <br><br>
+
+  Enter Hotel Address :
+  <input type = "text" required
+  Enter city Id :
+  <input type = "number" required [(ngModel)] = "newHotel.hotelCityId" name = "cityId">
+  
+  <br><br>
+  <input type='submit' value = 'Add' /> 
+</form>-->
+
+<br><br>
+
+<div>
+
+  
+  <button type = "button" class = "button btn-danger" (click) = "callGetHotelsList()"> Get All Hotels</button>
+</div>
+
+<!-- to search hotel by id  -->
+<!-- <div>
+  <form (ngSubmit) = "searchHotel()">
+    Enter Hotel Name : 
+    <input type = "text" required[(ngModel)] = "hotel.hotelName" name = "hotelName">
+
+    <br><br>
+
+    <input type="submit" value="Search"/>
+  </form>
+</div> -->
+
+<li *ngFor = "let hotel of hotels | async " style = "width: 300px;">
+
+  <table border="1px solid black">
+    <tr>
+      <td>
+        HotelId :
+      </td>
+      <td>
+        {{hotel.hotelId}}
+      </td>
+    </tr>
+    <tr>
+      <td>
+        Hotel Name :
+      </td>
+      <td>
+        {{hotel.hotelName}}
+      </td>
+    </tr>
+    <tr>
+      <td>
+        Hotel Address :
+      </td>
+      <td>
+        {{hotel.hotelAddress}}
+      </td>
+    </tr>
+    <tr>
+      <td>
+        city Id :
+      </td>
+      <td>
+        {{hotel.hotelCityId}}
+      </td>
+    </tr>
+    <tr>
+      <td>
+        Hotel Pincode : 
+      </td>
+      <td>
+        {{hotel.hotelPinCode}}
+      </td>
+    </tr>
+  </table>
+</li> 

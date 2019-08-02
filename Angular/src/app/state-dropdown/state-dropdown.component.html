@@ -1,0 +1,93 @@
+
+<div class="card-deck row">
+    <div class="card mt-5  mr-auto ml-4 text-white bg-success mb-3 col-4" style="width:300px">
+        <div class="card-body">
+            <form  (ngSubmit)="getHotelByCity()">
+            <form>    
+                <div class="form-group">
+                  <label for="exampleFormControlSelect1">Search By State</label>
+                  <select class="form-control" (change)="onChangeState($event)">
+                      <option>select</option>
+                      <option *ngFor="let state of states" [value]="state.stateId">{{state.stateName}}</option>                  
+                  </select>
+                </div>
+                
+              </form>
+              <form>
+    
+                  <div class="form-group ">
+                    <label for="exampleFormControlSelect1">Search By City</label>
+                    <select class="form-control"  (change)="onChangeCity($event)">
+                        <option>select</option>
+      <option *ngFor="let city of cities" [value]="city.cityId">{{city.cityName}}</option>
+                    </select>
+                  </div>
+                  
+                </form>
+              </form>
+              <li *ngFor = "let hotel of hotels">
+                  <table>
+                    <tr>
+                      <td><label>Hote Name : </label></td>
+                      <td>{{hotel.hotelName}}</td>
+                    </tr>
+                    <tr>
+                      <td><label>Hotel Address : </label></td>
+                      <td>{{hotel.hotelAddress}}</td>
+                    </tr>
+                    <tr>
+                      <td><label>Hotel Pincode</label></td>
+                      <td>{{hotel.hotelPinCode}}</td>
+                    </tr>
+                    <tr>
+                      <td>
+                          <a routerLink = "bookHotel" role = "button" class="text-primary" routereLinkActive = "active" href>Book</a>
+                      </td>
+                    </tr>
+              
+                  </table>
+                </li>
+            </div>
+            </div>
+            <div class="card ml-auto mt-5 col-6  mr-auto mb-3">
+                <div id="demo" class="carousel slide" data-ride="carousel">
+          
+                    <!--  Indicators -->
+                     <ul class="carousel-indicators">
+                       <li data-target="#demo" data-slide-to="0" class="active"></li>
+                       <li data-target="#demo" data-slide-to="1"></li>
+                       <li data-target="#demo" data-slide-to="2"></li>
+                     </ul>
+                   
+                     <!-- The slideshow -->
+                     <div class="carousel-inner">
+                       <div class="carousel-item active">
+                         <img src="./assets/img/Studio1.jpg" alt="Los Angeles">
+                       </div>
+                       <div class="carousel-item">
+                         <img src="./assets/img/Studio2.jpg" alt="Chicago">
+                       </div>
+                       <div class="carousel-item">
+                         <img src="./assets/img/Studio3.jpg" alt="New York">
+                       </div>
+                     </div>
+                   
+                     <!-- Left and right controls -->
+                     <a class="carousel-control-prev" href="#demo" data-slide="prev">
+                       <span class="carousel-control-prev-icon"></span>
+                     </a>
+                     <a class="carousel-control-next" href="#demo" data-slide="next">
+                       <span class="carousel-control-next-icon"></span>
+                     </a>
+                    
+                    <div id="myCarousel" class="carousel slide" data-ride="carousel">
+                 
+                   </div>
+              </div>
+          
+</div>
+
+
+  
+
+  

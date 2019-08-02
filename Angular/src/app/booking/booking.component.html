@@ -1,0 +1,76 @@
+<div class="panel panel-primary">
+  <div class="panel-heading">Booking </div>
+  <div class="panel-body">
+      <form [formGroup]="bookForm" (ngSubmit)="onSubmit(bookForm)">
+          <div class="col-sm-4">
+
+              <div class="row">
+                  <div class="col-sm-7">
+                  <div class="form-group ">
+                    <label for="booking date">Booking Date : </label>
+                        <input type="date" 
+                        formControlName="bookingDate"
+                        class="form-control"
+                        placeholder="Booking Date" 
+                        id="bookingDate">
+                  </div> 
+                </div>
+                
+
+                  <div class="row">
+                      <div class="col-sm-7">
+                           <div class="form-group">
+                              <label for="User check in date">Check In Date: </label>
+                              <input type="date" formControlName="checkInDate" class="form-control" id="checkInDate"
+                              placeholder="Check In Date: ">
+                          </div>
+                     </div>
+
+                      <div class="col-sm-7">
+                          <div class="form-group">
+                               <label for="User check Out Date">Check Out Date: </label>
+                               <input type="date" formControlName="checkOutDate" class="form-control" id="checkOutDate"
+                                placeholder="Check Out Date: ">
+                          </div>
+                      </div>
+
+                      <div class="col-sm-7">
+                          <div class="form-group">
+                               <label for="User Email">Email</label>
+                               <input type="email" formControlName="customerEmail" class="form-control" id="customerEmail"
+                               placeholder="Enter E-mail">
+                          </div>
+                      </div>
+                        
+
+                      <div class="col-sm-7">
+                          <div class="form-group">
+                                <label for="room">Room Types</label>
+                                <select formControlName="roomTypeId"
+                                class="form-control" 
+                                id="roomTypes">
+                                <option value ="" disabled selected hidden>select</option>
+                                <option value = '1'>Luxury</option>
+                                <option value = '2'>Semi Deluxe</option>
+                                <option value = '3'>Super Deluxe</option>
+                                <option value = '4'>Premium</option>
+                                <option value = '5'>Bachelor Pad</option>
+                                </select>
+                          </div>
+                      </div>
+
+                     <div class="col-sm-7">
+                         <div class="form-group">
+                                <label for="No Of Rooms">Number of Rooms</label>
+                                <input type="text" formControlName="noOfRoomsBooked" class="form-control" id="noOfRooms"
+                                placeholder="Number of Rooms">
+                          </div>
+                          <button type="submit" class="btn btn-primary">Submit</button>    
+                     </div>
+                  </div>
+              </div>
+          </div>
+      </form>
+      {{bookForm.value|json}}
+  </div>
+</div>

@@ -1,0 +1,65 @@
+
+
+
+
+
+<div class="card-columns">
+        <div class="card bg-info  ml-auto mr-auto">
+         
+
+<div class="panel panel-primary">
+    <div class="panel-heading">Customer Login</div>
+        <div class="panel-body">
+         
+            <form [formGroup]="userForm1" (ngSubmit)="onSubmit(userForm1)">
+
+
+                <div class="row">
+
+
+
+                       <div class="col-sm-7">
+                          <div class="form-group">
+                               <label for="User Email">Enter User Email</label>
+                               <input type="email" formControlName="customerEmail" class="form-control" id="customerEmail"
+                               placeholder="Enter E-mail">
+                          </div>
+                       </div>
+
+                          <div class="col-sm-7">
+                              
+
+
+                              <div class="form-group">
+                                  <label for="password">Enter Password </label>
+                                  <input type="password" formControlName="customerPassword" class="form-control"
+                                  placeholder="Please Enter Password" id="customerPassword">
+                              </div>
+
+                              
+
+                               
+                               <div class="col-sm-5">
+                                  
+                                
+                               
+
+
+                                  <button type="submit" class="btn btn-primary">Login</button>
+                                  
+                                  
+                             
+                               </div>
+                               
+                               
+                               
+                               </div>
+                           </div>
+                       
+                  
+                </form>
+                    {{userForm1.value|json}}
+  </div>
+</div>
+</div>
+</div>
